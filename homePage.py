@@ -4,10 +4,10 @@ from tkinter import *
 from tkinter import ttk,messagebox
 from PIL import Image, ImageTk
 
-from add11stdA import add11stdA
-from course import course
-from fillMarks import class_marks
-from result import resultClass
+from menu.add11stdA import add11stdA
+from menu.course import course
+from menu.fillMarks import class_marks
+from menu.result import resultClass
 #from importcsv import csv_export
 
 
@@ -21,12 +21,12 @@ class SSA:
         self.window.config(bg="#eBffff")
 
         # ICONS
-        img = (Image.open("logo.png"))
+        img = (Image.open("assets/logo.png"))
         resized_image = img.resize((60, 60))
         self.logo_dash = ImageTk.PhotoImage(resized_image)
         title = Label(self.window, text="SSA Result Management System", padx=10, compound=LEFT, image=self.logo_dash,font=("goudy old stlye", 20, "bold"), bg="#87CEFA", fg="White").place(x=0, y=0, relwidth=1,height=50)
         #menu
-        frame_menu = LabelFrame(self.window, text="Menus", font=("time new roman", 15), bg="#eBffff")
+        frame_menu = LabelFrame(self.window, text="Menu", font=("time new roman", 15), bg="#eBffff")
         frame_menu.place(x=10, y=70, width=190, height=508)
 
 
@@ -40,7 +40,7 @@ class SSA:
                             #cursor="hand2").place(x=7, y=210, width=170, height=35)
 
         # Image
-        self.image1 = Image.open("SSA3.jpg")
+        self.image1 = Image.open("assets/SSA3.jpg")
         #self.image1 = self.image1.resize((920, 350))
         self.image1 = ImageTk.PhotoImage(self.image1)
         self.label_image1 = Label(self.window, image=self.image1,bg="#eBffff").place(x=370, y=60, width=900, height=800)
@@ -81,7 +81,7 @@ class SSA:
 
             cursor.execute(Table_Query)
 
-            file = open('bkq.csv')
+            file = open('assets/bkq.csv')
 
             contents = csv.reader(file)
 

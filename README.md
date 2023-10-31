@@ -10,7 +10,12 @@
   6. Export data as CSV files for yearly student records.
 
 To check it out, follow these steps:
-1. Run the `mainSSA` file in PyCharm.
+1. cd .\Academia-Junior-College-Doc-Generation-Desktop-Application\
+2. pip install -r requirements.txt( python -m pip install Pillow, python -m pip install PyPDF2 , python -m pip install reportlab)
+3. Run the `mainSSA` file in PyCharm.(python mainSSA.py)
+
+Important: Please check out the csv formate(bkq.csv) of students data which is supported by this application, in the home page first you import students data then all the GRNo, of studnets will reflect at the time of adding students,course..
+   
 
 To create an executable (EXE) file:
 1. Install `auto-py-to-exe` or use `pyinstaller`.

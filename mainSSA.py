@@ -41,25 +41,25 @@ class standardClass:
         self.window.geometry("1500x800+30+30")
         self.window.config(bg="#d9f1ff")
         # ICONS
-        img = (Image.open("logo.png"))
+        img = (Image.open("assets/logo.png"))
         resized_image = img.resize((59, 59))
         self.logo_dash = ImageTk.PhotoImage(resized_image)
 
         # footer
         title = Label(self.window,text="SSA Result Management System\nContact us for any technical issue:Umer Bijapure-7020152273",font=("goudy old stlye", 10), bg="#87CEFA", fg="White").pack(side=BOTTOM, fill=X)
-        self.image1 = Image.open("A.jpeg")
+        self.image1 = Image.open("assets/A.jpeg")
         #self.image1 = self.image1.resize((920, 350))
         self.image1 = ImageTk.PhotoImage(self.image1)
-        self.label_image1 = Label(self.window, image=self.image1,bg="#eBffff").place(x=370, y=60, width=1000, height=740)
+        self.label_image1 = Label(self.window, image=self.image1,bg="#eBffff").place(x=370, y=60, width=1000, height=700)
 
 
         # widgets
         title = Label(self.window, text="SSA Result Management System", padx=10, compound=LEFT, image=self.logo_dash,font=("goudy old stlye", 20, "bold"), bg="#87CEFA", fg="White").place(x=0, y=0, relwidth=1,height=50)
         #btn_std = Button(self.window, text="Class A", font=("goudym old style", 15), bg="#0b5377", fg="white",
                          #cursor="hand2", command=self.std11).place(x=160, y=170, width=170, height=35)
-        btn_std = Button(self.window, text="Click To Start", font=("goudym old style", 15), bg="#0b5377", fg="white",
+        btn_std = Button(self.window, text="Let's Get Started", font=("goudym old style", 15), bg="#0b5377", fg="white",
                          cursor="hand2", command=self.std11).place(x=375, y=200, width=200, height=35)
-        btn_all_students = Button(self.window, text="Drop", font=("goudym old style", 15), bg="#0b5377", fg="white",cursor="hand2", command=self.drop_all).place(x=375, y=300, width=200, height=35)
+        btn_all_students = Button(self.window, text="Drop All Data", font=("goudym old style", 15), bg="#0b5377", fg="white",cursor="hand2", command=self.drop_all).place(x=375, y=300, width=200, height=35)
 
 
 
